@@ -41,7 +41,7 @@ npm install
 - Open **XAMPP** and start the **Apache** and **MySQL** services.
 - Open **phpMyAdmin** (available at `http://localhost/phpmyadmin`).
 - Create a new database named `crud_db`.
-- **Import the Database**: Use the backup file provided (`crud_db.sql`) and import it into your `crud_db` database. You can do this in phpMyAdmin by clicking on the **Import** tab.
+- **Import the Database**: Use the backup file provided (`DataBase/crud_db.sql`) and import it into your `crud_db` database. You can do this in phpMyAdmin by clicking on the **Import** tab.
 
 ### 5. Set up environment variables
 In the project, there is a `.env` file that handles the database connection variables. Update the credentials (username, password, etc.) based on your local XAMPP setup:
