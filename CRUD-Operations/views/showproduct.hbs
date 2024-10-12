@@ -1,0 +1,43 @@
+<h1>View Product</h1>
+<hr />
+
+<!-- Table to display detailed product information -->
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <!-- Product ID -->
+      <td>Created At</td>
+      <!-- Date and time the product was created -->
+      <td>Name</td>
+      <!-- Product name -->
+      <td>Weight</td>
+      <!-- Product weight -->
+      <td>Price</td>
+      <!-- Product price -->
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Loop through 'rows' to display the product details -->
+    {{#each rows}}
+      <tr>
+        <td>{{ID}}</td>
+        <!-- Display the product's ID -->
+        <td>{{formatted_datetime}}</td>
+        <!-- Display the formatted creation date -->
+        <td>{{NAME}}</td>
+        <!-- Display the product name -->
+        <td>{{WEIGHT}}</td>
+        <!-- Display the product weight -->
+        <td>{{PRICE}}</td>
+        <!-- Display the product price -->
+      </tr>
+    {{/each}}
+    <!-- Close the loop -->
+  </tbody>
+</table>
+
+<!-- Back link to return to the product list -->
+<br />
+<a href="/" class="back">Back</a>
+<!-- Back button to return to the home page -->

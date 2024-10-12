@@ -1,0 +1,66 @@
+<h1>Products List</h1>
+
+<!-- Link to create a new product -->
+<p><a href="/addproduct" class="add">Create New</a></p>
+
+<!-- Table displaying the list of products -->
+<table>
+  <thead>
+    <tr>
+      <td>Created At</td>
+      <!-- Column for the creation date -->
+      <td>Name</td>
+      <!-- Column for the product name -->
+      <td>Weight</td>
+      <!-- Column for the product weight -->
+      <td>Price</td>
+      <!-- Column for the product price -->
+      <td colspan="3">Action</td>
+      <!-- Column for actions (edit, show, delete) -->
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Loop through the 'rows' array and render each product row -->
+    {{#each rows}}
+      <tr>
+        <!-- Display formatted creation date, name, weight, and price for each product -->
+        <td>{{formatted_datetime}}</td>
+        <!-- Formatted creation date -->
+        <td>{{NAME}}</td>
+        <!-- Product name -->
+        <td>{{WEIGHT}}</td>
+        <!-- Product weight -->
+        <td>{{PRICE}}</td>
+        <!-- Product price -->
+
+        <!-- Action buttons: Edit, Show, and Delete -->
+        <td><a href="/editproduct/{{ID}}" class="edit">Edit</a></td>
+        <!-- Link to edit product -->
+        <td><a href="/showproduct/{{ID}}" class="show">Show</a></td>
+        <!-- Link to view product details -->
+        <td>
+          <!-- Confirmation dialog before deleting a product -->
+          <a
+            onclick="return confirm('Are you sure?')"
+            href="/deleteproduct/{{ID}}"
+            class="delete"
+          >Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<div class="pagination">
+  {{#if (gt currentPage 1)}}
+    <a href="?page={{subtract currentPage 1}}" class="previous">&lt;&lt; Previous</a>
+  {{else}}
+    <a href="" class="previousn">&lt;&lt; Previous</a>
+  {{/if}}
+
+  {{#if (lt currentPage totalPages)}}
+    <a href="?page={{add currentPage 1}}" class="next">Next &gt;&gt;</a>
+  {{else}}
+    <a href="" class="nextn">Next &gt;&gt;</a>
+  {{/if}}
+</div>

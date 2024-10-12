@@ -1,0 +1,64 @@
+<h1>Add New Product</h1>
+<hr />
+
+<!-- Display success message if 'msg' exists -->
+{{#if msg}}
+  <div class="alert" id="msgAlert">{{msg}}
+  </div>
+  <!-- Success or error message will be shown here -->
+  <!-- Add JavaScript to auto-hide the message after 5 seconds -->
+  <script>
+    setTimeout(function() { var msgAlert = document.getElementById('msgAlert');
+    if (msgAlert) { msgAlert.style.display = 'none'; } }, 1500); // Time in milliseconds (1000ms = 1 seconds)
+  </script>
+{{/if}}
+
+<!-- Form for adding a new product -->
+<form action="/addproduct" method="post" autocomplete="off">
+
+  <!-- Product Name Input Field -->
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="{{this.NAME}}" required />
+    <!-- 'this.NAME' allows pre-filling data if available -->
+  </div>
+
+  <!-- Product Weight Input Field -->
+  <div class="form-group">
+    <label for="weight">Weight</label>
+    <input
+      type="number"
+      name="weight"
+      value="{{this.WEIGHT}}"
+      required
+      min="1"
+      step="1"
+    />
+    <!-- Minimum value is 1 -->
+  </div>
+
+  <!-- Product Price Input Field -->
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input
+      type="number"
+      name="price"
+      value="{{this.PRICE}}"
+      required
+      min="10"
+      step="10"
+    />
+    <!-- Price cannot be less than 10 -->
+  </div>
+
+  <!-- Form Buttons: Save, Clear, and Back -->
+  <div class="form-group">
+    <button type="submit" class="savebtn">Save</button>
+    <!-- Submit button to save product -->
+    <button type="reset" class="resetbtn">Clear</button>
+    <!-- Reset button to clear form fields -->
+    <a href="/" class="back">Back</a>
+    <!-- Link to go back to the home page -->
+  </div>
+
+</form>
