@@ -27,20 +27,24 @@ Make sure you have the following installed on your machine:
 git clone https://github.com/iamnirusan/Intern-Tasks.git
 cd CRUD-Operations
 ```
+### 2. Navigate to the project directory
+```
+cd CRUD-Operations
+```
 
-### 2. Install Node.js Dependencies
-Navigate to the project directory and run the following command to install the necessary Node.js packages:
+### 3. Install Node.js Dependencies
+Run the following command to install the necessary Node.js packages:
 ```bash
 npm install
 ```
 
-### 3. Setup MySQL Database
+### 4. Setup MySQL Database
 - Open **XAMPP** and start the **Apache** and **MySQL** services.
 - Open **phpMyAdmin** (available at `http://localhost/phpmyadmin`).
 - Create a new database named `crud_db`.
 - **Import the Database**: Use the backup file provided (`crud_db.sql`) and import it into your `crud_db` database. You can do this in phpMyAdmin by clicking on the **Import** tab.
 
-### 4. Set up environment variables
+### 5. Set up environment variables
 In the project, there is a `.env` file that handles the database connection variables. Update the credentials (username, password, etc.) based on your local XAMPP setup:
 
 ```
@@ -50,14 +54,14 @@ DB_PASSWORD=yourpassword
 DB_NAME=crud_db
 ```
 
-### 5. Run the Project
+### 6. Run the Project
 To start the project, use the following command:
 ```bash
 npm start
 ```
 This will start the server, and the web application will be accessible at `http://localhost:5000`.
 
-### 6. Using the Application
+### 7. Using the Application
 - Visit `http://localhost:5000` in your browser.
 - You can create, read, update, and delete records using the simple web interface.
 
