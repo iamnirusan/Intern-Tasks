@@ -47,9 +47,9 @@ npm install
 In the project, there is a `.env` file that handles the database connection variables. Update the credentials (username, password, etc.) based on your local XAMPP setup:
 
 ```
-DB_HOST=hostname
-DB_USER=username
-DB_PASSWORD=yourpassword
+DB_HOST=localhost 
+DB_USER=root
+DB_PASSWORD=yourpassword 
 DB_NAME=crud_db
 ```
 
