@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,100&display=swap");
+html {
+  width: 670px;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  width: 650px;
+}
+
+table thead td {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 12px;
+  border-top: 1px solid gainsboro;
+}
+
+table tbody td,
+.add,
+.previous,
+.next,
+.previousn,
+.nextn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+  padding: 12px;
+  border-top: 1px solid gainsboro;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: rgb(231, 229, 229);
+}
+
+.edit,
+.show,
+.delete,
+.add {
+  text-decoration: none;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.edit,
+.add,
+.savebtn {
+  background-color: rgb(4, 163, 4);
+}
+
+.show,
+.back {
+  background-color: rgb(6, 170, 224);
+}
+
+.delete,
+.resetbtn {
+  background-color: red;
+}
+
+p {
+  text-align: right;
+}
+.add {
+  padding: 10px;
+}
+
+.form-group {
+  margin-top: 10px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.form-group label,
+.form-group input {
+  display: block;
+  padding: 5px;
+  width: 450px;
+}
+
+button {
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  font-size: 15px;
+  width: 150px;
+}
+
+.alert {
+  display: block;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: black;
+  background: lightgray;
+  border-radius: 3px;
+  height: 20px;
+  text-align: center;
+  width: 630px;
+}
+.back {
+  text-decoration: none;
+  color: white;
+  padding: 10px 60px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+}
+.previous,
+.next,
+.previousn,
+.nextn {
+  text-decoration: none;
+  border: 1px solid lightgray;
+  padding: 5px 20px;
+  margin: -3px;
+}
+.pagination {
+  margin-top: 20px;
+}
+.previous,
+.next {
+  color: rgb(69, 169, 231);
+  font-weight: 500;
+}
+
+.previousn,
+.nextn {
+  color: black;
+  font-weight: 300;
+}
