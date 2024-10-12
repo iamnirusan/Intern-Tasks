@@ -25,11 +25,10 @@ Make sure you have the following installed on your machine:
 ### 1. Clone the Repository
 ```
 git clone https://github.com/iamnirusan/Intern-Tasks.git
-cd CRUD-Operations
 ```
 ### 2. Navigate to the project directory
 ```
-cd CRUD-Operations
+cd Intern-Tasks/CRUD-Operations
 ```
 
 ### 3. Install Node.js Dependencies
